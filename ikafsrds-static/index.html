@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKA FSRD Trisakti - Ikatan Alumni Fakultas Seni Rupa & Desain</title>
+  <meta name="description" content="Ikatan Alumni Fakultas Seni Rupa & Desain Universitas Trisakti - Menghubungkan alumni untuk kemajuan bersama dalam dunia seni dan desain.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Output -->
+  <link rel="stylesheet" href="dist/output.css">
+  
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="min-h-screen">
+  
+  <!-- ========== HEADER ========== -->
+  <header class="sticky top-0 z-50 w-full backdrop-blur border-b shadow-md" style="background: hsl(var(--header-bg)); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="index.html">
+            <img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo" class="h-10 w-auto">
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="index.html" class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20 transition-colors">Beranda</a>
+          <a href="tentang-kami.html" class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20 transition-colors">Tentang Kami</a>
+          <a href="program.html" class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20 transition-colors">Program</a>
+          <a href="karya-alumni.html" class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20 transition-colors">Karya Alumni</a>
+          <a href="donasi.html" class="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-4 py-2 rounded-md transition-colors">Donasi</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-gray-700 p-2 rounded-md hover:bg-white/20 transition-colors">
+          <i id="menu-icon-open" data-lucide="menu" class="h-6 w-6"></i>
+          <i id="menu-icon-close" data-lucide="x" class="h-6 w-6 hidden"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 right-0 border-b shadow-lg" style="background: hsl(var(--header-bg));">
+        <nav class="flex flex-col py-4">
+          <a href="index.html" class="px-6 py-3 text-gray-700 hover:text-gray-900 font-medium hover:bg-white/20 transition-colors">Beranda</a>
+          <a href="tentang-kami.html" class="px-6 py-3 text-gray-700 hover:text-gray-900 font-medium hover:bg-white/20 transition-colors">Tentang Kami</a>
+          <a href="program.html" class="px-6 py-3 text-gray-700 hover:text-gray-900 font-medium hover:bg-white/20 transition-colors">Program</a>
+          <a href="karya-alumni.html" class="px-6 py-3 text-gray-700 hover:text-gray-900 font-medium hover:bg-white/20 transition-colors">Karya Alumni</a>
+          <a href="donasi.html" class="mx-4 my-2 bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-4 py-2 rounded-md text-center transition-colors">Donasi</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <section id="hero" class="hero-section-interactive relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background images with fade transition -->
+      <div id="hero-bg-0" class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700" style="background-image: url('assets/hero-berjejaring.png'); opacity: 1; z-index: 1;"></div>
+      <div id="hero-bg-1" class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700" style="background-image: url('assets/hero-berkarya.png'); opacity: 0; z-index: 0;"></div>
+      <div id="hero-bg-2" class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700" style="background-image: url('assets/hero-berjaya.png'); opacity: 0; z-index: 0;"></div>
+      
+      <!-- Dark overlay -->
+      <div class="absolute inset-0 bg-black/50 z-[2]"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-white flex items-end justify-center min-h-screen pb-20">
+        <div class="max-w-4xl mx-auto text-center">
+          <!-- Interactive Headlines -->
+          <div class="mb-8 space-y-4">
+            <h1 id="pillar-0" class="hero-pillar cursor-pointer transition-all duration-500 leading-tight opacity-100 font-bold text-5xl md:text-7xl" data-index="0">Berjejaring</h1>
+            <h1 id="pillar-1" class="hero-pillar cursor-pointer transition-all duration-500 leading-tight opacity-50 font-normal text-3xl md:text-5xl" data-index="1">Berkarya</h1>
+            <h1 id="pillar-2" class="hero-pillar cursor-pointer transition-all duration-500 leading-tight opacity-50 font-normal text-3xl md:text-5xl" data-index="2">Berjaya</h1>
+          </div>
+
+          <p id="hero-description" class="text-lg md:text-xl mb-10 leading-relaxed opacity-90">
+            Membangun koneksi yang bermakna antar alumni
+          </p>
+
+          <!-- CTA Button -->
+          <a href="program.html" class="inline-block bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all rounded-md">
+            Jelajahi Program Kami
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ALUMNI BERPRESTASI ========== -->
+    <section id="alumni-berprestasi" class="py-20 section-decorator decorator-circles">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Alumni Berprestasi</h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Kebanggaan kami, alumni FSRD Trisakti yang telah mencapai kesuksesan 
+            di berbagai bidang seni dan desain
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Alumni Card 1 -->
+          <div class="group bg-card rounded-lg border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="p-8">
+              <div class="text-center space-y-6">
+                <div class="relative mx-auto w-32 h-32">
+                  <img src="https://placehold.co/200x200/e2e8f0/64748b?text=YW" alt="Yenny Wahid - Alumni FSRD Trisakti" class="w-full h-full rounded-full object-cover border-4 border-primary/30 group-hover:border-primary/50 transition-colors">
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-foreground mb-2">Yenny Wahid</h3>
+                  <p class="text-primary font-semibold text-lg">Sociopreneur & Activist</p>
+                </div>
+                <blockquote class="text-muted-foreground italic leading-relaxed pt-4 border-t border-border">
+                  "FSRD mengajarkan saya bahwa kreativitas adalah alat perubahan sosial."
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alumni Card 2 -->
+          <div class="group bg-card rounded-lg border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="p-8">
+              <div class="text-center space-y-6">
+                <div class="relative mx-auto w-32 h-32">
+                  <img src="https://placehold.co/200x200/e2e8f0/64748b?text=UG" alt="Upie Guava - Alumni FSRD Trisakti" class="w-full h-full rounded-full object-cover border-4 border-primary/30 group-hover:border-primary/50 transition-colors">
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-foreground mb-2">Upie Guava</h3>
+                  <p class="text-primary font-semibold text-lg">Music Video Director</p>
+                </div>
+                <blockquote class="text-muted-foreground italic leading-relaxed pt-4 border-t border-border">
+                  "Visual storytelling yang kuat berawal dari fondasi seni yang kokoh di kampus ini."
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alumni Card 3 -->
+          <div class="group bg-card rounded-lg border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="p-8">
+              <div class="text-center space-y-6">
+                <div class="relative mx-auto w-32 h-32">
+                  <img src="https://placehold.co/200x200/e2e8f0/64748b?text=JA" alt="Jeff Andrew - Alumni FSRD Trisakti" class="w-full h-full rounded-full object-cover border-4 border-primary/30 group-hover:border-primary/50 transition-colors">
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-foreground mb-2">Jeff Andrew</h3>
+                  <p class="text-primary font-semibold text-lg">Tech Entrepreneur (Jabra Tech)</p>
+                </div>
+                <blockquote class="text-muted-foreground italic leading-relaxed pt-4 border-t border-border">
+                  "Inovasi teknologi dan sensibilitas desain adalah kombinasi masa depan."
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <p class="text-muted-foreground">
+            Ingin berbagi cerita kesuksesan Anda? 
+            <a href="#footer" class="text-primary hover:underline ml-1 font-medium">
+              Hubungi kami
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROGRAM UNGGULAN ========== -->
+    <section id="program-preview" class="py-16 section-decorator decorator-triangles">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Program yang Bermanfaat</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Program Card 1 -->
+          <div class="bg-card rounded-lg border shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="p-6">
+              <div class="mx-auto mb-4 flex justify-center">
+                <div class="ika-geometric-circle"></div>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Jembatan Karier</h3>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-muted-foreground mb-6 leading-relaxed">
+                Program mentoring dan job placement untuk membantu alumni mendapatkan peluang karier terbaik di industri kreatif.
+              </p>
+              <div class="space-y-3">
+                <a href="program.html#jembatan-karier" class="block w-full border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md px-4 py-2 text-sm font-medium transition-colors">
+                  Lihat Detail
+                </a>
+                <button class="w-full text-white rounded-md px-4 py-2 text-sm font-medium transition-colors" style="background-color: hsl(var(--ika-yellow));">
+                  Daftar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program Card 2 -->
+          <div class="bg-card rounded-lg border shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="p-6">
+              <div class="mx-auto mb-4 flex justify-center">
+                <div class="ika-geometric-triangle"></div>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Akselerator Bisnis & Wirausaha</h3>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-muted-foreground mb-6 leading-relaxed">
+                Inkubator bisnis khusus untuk mengembangkan startup dan UMKM di bidang seni, desain, dan industri kreatif.
+              </p>
+              <div class="space-y-3">
+                <a href="program.html#akselerator-bisnis" class="block w-full border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md px-4 py-2 text-sm font-medium transition-colors">
+                  Lihat Detail
+                </a>
+                <button class="w-full text-white rounded-md px-4 py-2 text-sm font-medium transition-colors" style="background-color: hsl(var(--ika-blue));">
+                  Daftar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program Card 3 -->
+          <div class="bg-card rounded-lg border shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="p-6">
+              <div class="mx-auto mb-4 flex justify-center">
+                <div class="ika-geometric-square"></div>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Bengkel Skill & Wawasan</h3>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-muted-foreground mb-6 leading-relaxed">
+                Workshop, seminar, dan pelatihan untuk meningkatkan hard skill dan soft skill sesuai perkembangan industri.
+              </p>
+              <div class="space-y-3">
+                <a href="program.html#bengkel-skill" class="block w-full border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md px-4 py-2 text-sm font-medium transition-colors">
+                  Lihat Detail
+                </a>
+                <button class="w-full text-white rounded-md px-4 py-2 text-sm font-medium transition-colors" style="background-color: hsl(var(--ika-red));">
+                  Daftar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ETALASE KARYA ========== -->
+    <section id="etalase-karya" class="py-20 bg-secondary/30 section-decorator decorator-squares">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Karya Terbaik Alumni</h2>
+          <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Dari desain produk hingga instalasi seni, inilah bukti kualitas visual alumni FSRD Trisakti.
+          </p>
+        </div>
+
+        <!-- Masonry Grid -->
+        <div class="masonry-grid mb-12">
+          <!-- Karya 1 -->
+          <div class="masonry-item group cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Urban+Landscape" alt="Urban Landscape Series oleh Ahmad Rizki" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 class="text-xl font-bold mb-2 text-center">Urban Landscape Series</h3>
+                <p class="text-sm opacity-90 mb-1">Ahmad Rizki</p>
+                <span class="text-xs bg-accent text-accent-foreground px-3 py-1 rounded-full">Ilustrasi</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Karya 2 -->
+          <div class="masonry-item group cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <img src="https://placehold.co/400x500/e2e8f0/64748b?text=Modern+Living" alt="Modern Living Space oleh Dina Kusuma" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 class="text-xl font-bold mb-2 text-center">Modern Living Space</h3>
+                <p class="text-sm opacity-90 mb-1">Dina Kusuma</p>
+                <span class="text-xs bg-accent text-accent-foreground px-3 py-1 rounded-full">Interior Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Karya 3 -->
+          <div class="masonry-item group cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <img src="https://placehold.co/400x350/e2e8f0/64748b?text=Fashion+Collection" alt="Sustainable Fashion Collection oleh Maya Sari" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 class="text-xl font-bold mb-2 text-center">Sustainable Fashion Collection</h3>
+                <p class="text-sm opacity-90 mb-1">Maya Sari</p>
+                <span class="text-xs bg-accent text-accent-foreground px-3 py-1 rounded-full">Fashion Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Karya 4 -->
+          <div class="masonry-item group cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <img src="https://placehold.co/400x280/e2e8f0/64748b?text=Brand+Identity" alt="Brand Identity - Startup Tech oleh Rudi Pratama" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 class="text-xl font-bold mb-2 text-center">Brand Identity - Startup Tech</h3>
+                <p class="text-sm opacity-90 mb-1">Rudi Pratama</p>
+                <span class="text-xs bg-accent text-accent-foreground px-3 py-1 rounded-full">Visual Communication</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Karya 5 -->
+          <div class="masonry-item group cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <img src="https://placehold.co/400x450/e2e8f0/64748b?text=Art+Installation" alt="Contemporary Art Installation oleh Lisa Wijaya" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 class="text-xl font-bold mb-2 text-center">Contemporary Art Installation</h3>
+                <p class="text-sm opacity-90 mb-1">Lisa Wijaya</p>
+                <span class="text-xs bg-accent text-accent-foreground px-3 py-1 rounded-full">Fine Arts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Karya 6 -->
+          <div class="masonry-item group cursor-pointer">
+            <div class="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <img src="https://placehold.co/400x320/e2e8f0/64748b?text=Product+Design" alt="Product Design - Smart Home oleh Budi Santoso" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 class="text-xl font-bold mb-2 text-center">Product Design - Smart Home</h3>
+                <p class="text-sm opacity-90 mb-1">Budi Santoso</p>
+                <span class="text-xs bg-accent text-accent-foreground px-3 py-1 rounded-full">Product Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center">
+          <a href="karya-alumni.html" class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all rounded-md">
+            Lihat Galeri Lengkap
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== JEJARING ALUMNI ========== -->
+    <section id="jejaring" class="py-16 bg-secondary/30 section-decorator decorator-circles">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+          Masuk ke Jantung Komunitas: Jejaring Kita
+        </h2>
+        
+        <p class="text-center text-lg text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+          Program di atas adalah hasil kolaborasi. Kekuatan sejati FSRD ada pada interaksi kita sehari-hari. 
+          Bergabunglah dengan platform komunikasi yang memungkinkan Anda terhubung langsung dengan sesama alumni.
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Network Card 1 -->
+          <div class="bg-card rounded-lg border shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="p-6">
+              <div class="mx-auto mb-4 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <i data-lucide="message-circle" class="w-8 h-8 text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Komunitas WA (Dapur Utama)</h3>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-muted-foreground mb-6 leading-relaxed">
+                Grup WhatsApp utama untuk diskusi, sharing informasi, dan koordinasi kegiatan alumni.
+              </p>
+              <button class="w-full text-white rounded-md px-4 py-2 text-sm font-medium transition-colors" style="background-color: hsl(var(--ika-blue));">
+                Gabung Komunitas WA
+              </button>
+            </div>
+          </div>
+
+          <!-- Network Card 2 -->
+          <div class="bg-card rounded-lg border shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="p-6">
+              <div class="mx-auto mb-4 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <i data-lucide="shopping-cart" class="w-8 h-8 text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">WAG Jual Beli</h3>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-muted-foreground mb-6 leading-relaxed">
+                Platform jual beli khusus alumni untuk produk kreatif, jasa desain, dan karya seni.
+              </p>
+              <button class="w-full text-white rounded-md px-4 py-2 text-sm font-medium transition-colors" style="background-color: hsl(var(--ika-red));">
+                Masuk WAG Jual Beli
+              </button>
+            </div>
+          </div>
+
+          <!-- Network Card 3 -->
+          <div class="bg-card rounded-lg border shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+            <div class="p-6">
+              <div class="mx-auto mb-4 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <i data-lucide="users" class="w-8 h-8 text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Direktori LinkedIn</h3>
+            </div>
+            <div class="p-6 pt-0">
+              <p class="text-muted-foreground mb-6 leading-relaxed">
+                Database lengkap profil profesional alumni untuk networking dan kolaborasi bisnis.
+              </p>
+              <button class="w-full text-white rounded-md px-4 py-2 text-sm font-medium transition-colors" style="background-color: hsl(var(--ika-green));">
+                Lihat Direktori LinkedIn
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CALL TO PARTICIPATE ========== -->
+    <section id="ikut-berkontribusi" class="py-20 px-4 cta-artistic-bg">
+      <div class="max-w-5xl mx-auto text-center relative z-10">
+        <div class="space-y-8">
+          <h2 class="text-4xl md:text-5xl font-bold text-foreground">
+            Ikut Berkontribusi
+          </h2>
+          
+          <p class="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Ada banyak cara untuk berkontribusi dan menjadi bagian dari komunitas alumni IKA FSRD Trisakti.
+          </p>
+          
+          <!-- 3 CTA Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+            <!-- CTA 1: Donasi -->
+            <div class="bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4 bg-primary/10 text-primary">
+                <i data-lucide="heart" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-foreground mb-2">Donasi Sekarang</h3>
+              <p class="text-muted-foreground text-sm mb-4">Dukung program-program IKA FSRD Trisakti</p>
+              <a href="donasi.html" class="block w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-md px-4 py-2 text-sm font-medium transition-colors text-center">
+                Donasi Sekarang
+              </a>
+            </div>
+
+            <!-- CTA 2: Submit Karya -->
+            <div class="bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4 bg-secondary text-secondary-foreground">
+                <i data-lucide="upload" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-foreground mb-2">Submit Karya</h3>
+              <p class="text-muted-foreground text-sm mb-4">Kirim karya terbaikmu untuk ditampilkan</p>
+              <a href="mailto:pengurus@ikafsrd.id?subject=Submit Karya Alumni&body=Halo Pengurus IKA FSRD Trisakti,%0A%0ASaya ingin mengirimkan karya untuk ditampilkan di website.%0A%0ANama:%0AAngkatan:%0AJudul Karya:%0ADeskripsi:%0A%0ATerima kasih." class="block w-full bg-secondary hover:bg-secondary/80 text-secondary-foreground rounded-md px-4 py-2 text-sm font-medium transition-colors text-center">
+                Submit Karya
+              </a>
+            </div>
+
+            <!-- CTA 3: Ikut Program -->
+            <div class="bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4 bg-accent text-accent-foreground">
+                <i data-lucide="book-open" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-foreground mb-2">Ikut Program</h3>
+              <p class="text-muted-foreground text-sm mb-4">Daftar workshop, seminar, dan kegiatan lainnya</p>
+              <a href="program.html" class="block w-full bg-accent hover:bg-accent/80 text-accent-foreground rounded-md px-4 py-2 text-sm font-medium transition-colors text-center">
+                Ikut Program
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer" class="bg-foreground text-background py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo" class="h-10 w-auto opacity-90">
+          <p class="text-sm opacity-90 leading-relaxed">
+            Ikatan Alumni Fakultas Seni Rupa & Desain Universitas Trisakti - 
+            Menghubungkan alumni untuk kemajuan bersama dalam dunia seni dan desain.
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold mb-4">Hubungi Kami</h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-start space-x-3">
+              <span class="opacity-75">📧</span>
+              <div>
+                <p class="font-medium">Email</p>
+                <p class="opacity-90">info@ikafsrdtrisakti.org</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <span class="opacity-75">📞</span>
+              <div>
+                <p class="font-medium">Telepon</p>
+                <p class="opacity-90">+62 21 5663232</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <span class="opacity-75">📍</span>
+              <div>
+                <p class="font-medium">Alamat</p>
+                <p class="opacity-90">
+                  Jl. Kyai Tapa No.1, Grogol<br>
+                  Jakarta Barat 11440
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operating Hours -->
+        <div class="space-y-4">
+          <h3 class="text-lg font-semibold mb-4">Jam Operasional</h3>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between">
+              <span>Senin - Jumat</span>
+              <span class="opacity-90">09:00 - 17:00</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Sabtu</span>
+              <span class="opacity-90">09:00 - 14:00</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Minggu</span>
+              <span class="opacity-90">Tutup</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-background/20 pt-6 text-center">
+        <p class="text-sm opacity-90">
+          © 2025 Ikatan Alumni Fakultas Seni Rupa & Desain Universitas Trisakti. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Hero section auto-cycling
+    const heroDescriptions = [
+      "Membangun koneksi yang bermakna antar alumni",
+      "Mewujudkan ide-ide kreatif yang inovatif",
+      "Merayakan kesuksesan bersama"
+    ];
+    
+    let activePillar = 0;
+    
+    function updateHero(index) {
+      activePillar = index;
+      
+      // Update backgrounds
+      for (let i = 0; i < 3; i++) {
+        const bg = document.getElementById(`hero-bg-${i}`);
+        if (bg) {
+          bg.style.opacity = i === index ? '1' : '0';
+          bg.style.zIndex = i === index ? '1' : '0';
+        }
+      }
+      
+      // Update pillars
+      for (let i = 0; i < 3; i++) {
+        const pillar = document.getElementById(`pillar-${i}`);
+        if (pillar) {
+          if (i === index) {
+            pillar.classList.remove('opacity-50', 'font-normal', 'text-3xl', 'md:text-5xl');
+            pillar.classList.add('opacity-100', 'font-bold', 'text-5xl', 'md:text-7xl');
+          } else {
+            pillar.classList.remove('opacity-100', 'font-bold', 'text-5xl', 'md:text-7xl');
+            pillar.classList.add('opacity-50', 'font-normal', 'text-3xl', 'md:text-5xl');
+          }
+        }
+      }
+      
+      // Update description
+      const desc = document.getElementById('hero-description');
+      if (desc) {
+        desc.textContent = heroDescriptions[index];
+      }
+    }
+    
+    // Auto-cycle every 5 seconds
+    setInterval(() => {
+      updateHero((activePillar + 1) % 3);
+    }, 5000);
+    
+    // Click/hover handlers for pillars
+    document.querySelectorAll('.hero-pillar').forEach(pillar => {
+      pillar.addEventListener('click', () => updateHero(parseInt(pillar.dataset.index)));
+      pillar.addEventListener('mouseenter', () => updateHero(parseInt(pillar.dataset.index)));
+    });
+  </script>
+</body>
+</html>

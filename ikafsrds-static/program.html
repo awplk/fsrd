@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program - IKA FSRD Trisakti</title>
+    <meta name="description"
+        content="Jelajahi berbagai program unggulan IKA FSRD Trisakti untuk pengembangan karier dan bisnis alumni.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dist/output.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+
+<body class="min-h-screen">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full backdrop-blur border-b shadow-md"
+        style="background: hsl(var(--header-bg));">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo"
+                            class="h-10 w-auto"></a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Beranda</a>
+                    <a href="tentang-kami.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Tentang
+                        Kami</a>
+                    <a href="program.html"
+                        class="text-gray-700 font-medium px-4 py-2 rounded-md bg-white/30">Program</a>
+                    <a href="karya-alumni.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Karya
+                        Alumni</a>
+                    <a href="donasi.html"
+                        class="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-4 py-2 rounded-md">Donasi</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 p-2 rounded-md hover:bg-white/20">
+                    <i id="menu-icon-open" data-lucide="menu" class="h-6 w-6"></i>
+                    <i id="menu-icon-close" data-lucide="x" class="h-6 w-6 hidden"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 right-0 border-b shadow-lg"
+                style="background: hsl(var(--header-bg));">
+                <nav class="flex flex-col py-4">
+                    <a href="index.html" class="px-6 py-3 text-gray-700 font-medium">Beranda</a>
+                    <a href="tentang-kami.html" class="px-6 py-3 text-gray-700 font-medium">Tentang Kami</a>
+                    <a href="program.html" class="px-6 py-3 text-gray-700 font-medium bg-white/20">Program</a>
+                    <a href="karya-alumni.html" class="px-6 py-3 text-gray-700 font-medium">Karya Alumni</a>
+                    <a href="donasi.html"
+                        class="mx-4 my-2 bg-primary text-primary-foreground font-medium px-4 py-2 rounded-md text-center">Donasi</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="py-16 bg-gradient-to-r from-primary/10 to-accent/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Semua Program IKA FSRD</h1>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Jelajahi berbagai program unggulan yang dirancang khusus untuk mendukung
+                    pengembangan karier dan bisnis alumni FSRD Trisakti.
+                </p>
+            </div>
+        </section>
+
+        <!-- Programs -->
+        <section class="py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-8">
+
+                    <!-- Program 1: Jembatan Karier -->
+                    <div id="jembatan-karier"
+                        class="bg-card rounded-lg border shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                        <div class="p-6 md:p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-primary text-primary-foreground text-sm px-3 py-1 rounded-full">Buka
+                                    Pendaftaran</span>
+                            </div>
+                            <h2 class="text-2xl font-bold mb-4">Jembatan Karier</h2>
+                            <p class="text-muted-foreground text-lg leading-relaxed mb-6">
+                                Program komprehensif yang menghubungkan alumni dengan peluang karier terbaik melalui
+                                mentoring personal, workshop pengembangan CV, simulasi interview, dan akses ke jaringan
+                                perusahaan partner.
+                            </p>
+
+                            <div class="grid md:grid-cols-3 gap-4 mb-6">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="clock" class="w-5 h-5 text-primary"></i>
+                                    <span class="text-sm">3 Bulan</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="users" class="w-5 h-5 text-primary"></i>
+                                    <span class="text-sm">50 Peserta</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="calendar" class="w-5 h-5 text-primary"></i>
+                                    <span class="text-sm">Setiap Sabtu, 09:00-12:00</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="font-semibold mb-3 flex items-center">
+                                    <i data-lucide="award" class="w-5 h-5 mr-2 text-primary"></i>
+                                    Yang Akan Anda Dapatkan:
+                                </h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">1-on-1 Mentoring dengan praktisi senior</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Workshop pengembangan CV dan portfolio</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Simulasi interview dan assessment</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Job fair eksklusif alumni</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Networking event dengan HR perusahaan</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button
+                                    class="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-4 py-2 font-medium transition-colors">
+                                    Lihat Detail Lengkap
+                                </button>
+                                <button class="flex-1 rounded-md px-4 py-2 font-medium transition-colors"
+                                    style="border: 2px solid hsl(var(--ika-yellow)); color: hsl(var(--ika-yellow));">
+                                    Daftar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program 2: Akselerator Bisnis -->
+                    <div id="akselerator-bisnis"
+                        class="bg-card rounded-lg border shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                        <div class="p-6 md:p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="bg-secondary text-secondary-foreground text-sm px-3 py-1 rounded-full">Segera
+                                    Dibuka</span>
+                            </div>
+                            <h2 class="text-2xl font-bold mb-4">Akselerator Bisnis & Wirausaha</h2>
+                            <p class="text-muted-foreground text-lg leading-relaxed mb-6">
+                                Program akselerasi 6 bulan untuk mengembangkan ide bisnis kreatif dari konsep hingga
+                                implementasi, dengan bimbingan mentor berpengalaman dan akses ke investor.
+                            </p>
+
+                            <div class="grid md:grid-cols-3 gap-4 mb-6">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="clock" class="w-5 h-5 text-primary"></i>
+                                    <span class="text-sm">6 Bulan</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="users" class="w-5 h-5 text-primary"></i>
+                                    <span class="text-sm">30 Peserta</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="calendar" class="w-5 h-5 text-primary"></i>
+                                    <span class="text-sm">Setiap Minggu, 14:00-17:00</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="font-semibold mb-3 flex items-center">
+                                    <i data-lucide="award" class="w-5 h-5 mr-2 text-primary"></i>
+                                    Yang Akan Anda Dapatkan:
+                                </h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Business plan development</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Pitching skills workshop</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Legal & financial consultation</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Access to investor network</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Co-working space facility</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button
+                                    class="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-4 py-2 font-medium transition-colors">
+                                    Lihat Detail Lengkap
+                                </button>
+                                <button class="flex-1 rounded-md px-4 py-2 font-medium transition-colors"
+                                    style="border: 2px solid hsl(var(--ika-blue)); color: hsl(var(--ika-blue));">
+                                    Daftar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program 3: Bengkel Skill -->
+                    <div id="bengkel-skill"
+                        class="bg-card rounded-lg border shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                        <div class="p-6 md:p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <span
+                                    class="bg-primary text-primary-foreground text-sm px-3 py-1 rounded-full">Berlangsung</span>
+                            </div>
+                            <h2 class="text-2xl font-bold mb-4">Bengkel Skill & Wawasan</h2>
+                            <p class="text-muted-foreground text-lg leading-relaxed mb-6">
+                                Serie workshop bulanan yang menghadirkan praktisi terdepan untuk berbagi tren terkini,
+                                tools baru, dan insight industri kreatif.
+                            </p>
+
+                            <div class="grid md:grid-cols-3 gap-4 mb-6">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="clock" class="w-5 h-5 text-primary"></i>
+                                    <span class="text-sm">Ongoing</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="users" class="w-5 h-5 text-primary"></i>
+                                    <span class="text-sm">100+ Peserta</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="calendar" class="w-5 h-5 text-primary"></i>
+                                    <span class="text-sm">Setiap Sabtu terakhir bulan</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="font-semibold mb-3 flex items-center">
+                                    <i data-lucide="award" class="w-5 h-5 mr-2 text-primary"></i>
+                                    Yang Akan Anda Dapatkan:
+                                </h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Monthly expert workshops</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Latest design tools training</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Industry trend insights</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Soft skills development</span></li>
+                                    <li class="flex items-start"><span class="text-primary mr-2">•</span><span
+                                            class="text-sm">Certification programs</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button
+                                    class="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-4 py-2 font-medium transition-colors">
+                                    Lihat Detail Lengkap
+                                </button>
+                                <button class="flex-1 rounded-md px-4 py-2 font-medium transition-colors"
+                                    style="border: 2px solid hsl(var(--ika-red)); color: hsl(var(--ika-red));">
+                                    Daftar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-foreground text-background py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="space-y-4">
+                    <img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo" class="h-10 w-auto opacity-90">
+                    <p class="text-sm opacity-90 leading-relaxed">Ikatan Alumni Fakultas Seni Rupa & Desain Universitas
+                        Trisakti - Menghubungkan alumni untuk kemajuan bersama dalam dunia seni dan desain.</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold mb-4">Hubungi Kami</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start space-x-3"><span class="opacity-75">📧</span>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <p class="opacity-90">info@ikafsrdtrisakti.org</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3"><span class="opacity-75">📞</span>
+                            <div>
+                                <p class="font-medium">Telepon</p>
+                                <p class="opacity-90">+62 21 5663232</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3"><span class="opacity-75">📍</span>
+                            <div>
+                                <p class="font-medium">Alamat</p>
+                                <p class="opacity-90">Jl. Kyai Tapa No.1, Grogol<br>Jakarta Barat 11440</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold mb-4">Jam Operasional</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between"><span>Senin - Jumat</span><span class="opacity-90">09:00 -
+                                17:00</span></div>
+                        <div class="flex justify-between"><span>Sabtu</span><span class="opacity-90">09:00 -
+                                14:00</span></div>
+                        <div class="flex justify-between"><span>Minggu</span><span class="opacity-90">Tutup</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-background/20 pt-6 text-center">
+                <p class="text-sm opacity-90">© 2025 Ikatan Alumni Fakultas Seni Rupa & Desain Universitas Trisakti. All
+                    Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

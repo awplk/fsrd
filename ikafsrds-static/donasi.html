@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donasi - IKA FSRD Trisakti</title>
+    <meta name="description" content="Dukung program-program IKA FSRD Trisakti melalui donasi Anda.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dist/output.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+
+<body class="min-h-screen bg-background">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full backdrop-blur border-b shadow-md"
+        style="background: hsl(var(--header-bg));">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo"
+                            class="h-10 w-auto"></a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Beranda</a>
+                    <a href="tentang-kami.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Tentang
+                        Kami</a>
+                    <a href="program.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Program</a>
+                    <a href="karya-alumni.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Karya
+                        Alumni</a>
+                    <a href="donasi.html"
+                        class="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-4 py-2 rounded-md">Donasi</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 p-2 rounded-md hover:bg-white/20">
+                    <i id="menu-icon-open" data-lucide="menu" class="h-6 w-6"></i>
+                    <i id="menu-icon-close" data-lucide="x" class="h-6 w-6 hidden"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 right-0 border-b shadow-lg"
+                style="background: hsl(var(--header-bg));">
+                <nav class="flex flex-col py-4">
+                    <a href="index.html" class="px-6 py-3 text-gray-700 font-medium">Beranda</a>
+                    <a href="tentang-kami.html" class="px-6 py-3 text-gray-700 font-medium">Tentang Kami</a>
+                    <a href="program.html" class="px-6 py-3 text-gray-700 font-medium">Program</a>
+                    <a href="karya-alumni.html" class="px-6 py-3 text-gray-700 font-medium">Karya Alumni</a>
+                    <a href="donasi.html"
+                        class="mx-4 my-2 bg-primary text-primary-foreground font-medium px-4 py-2 rounded-md text-center">Donasi</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-16 px-4">
+        <div class="max-w-2xl mx-auto">
+            <!-- Hero -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6">
+                    <i data-lucide="heart" class="w-10 h-10 text-primary"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-4">
+                    Dukung IKA FSRD Trisakti
+                </h1>
+                <p class="text-lg text-muted-foreground max-w-lg mx-auto">
+                    Kontribusi Anda membantu kami menyelenggarakan program-program untuk memajukan komunitas alumni.
+                </p>
+            </div>
+
+            <!-- Bank Info Card -->
+            <div class="bg-card border border-border rounded-2xl p-8 shadow-lg mb-8">
+                <h2 class="text-xl font-semibold text-foreground mb-6 text-center">
+                    Transfer ke Rekening Berikut
+                </h2>
+
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center py-3 border-b border-border">
+                        <span class="text-muted-foreground">Bank</span>
+                        <span class="font-semibold text-foreground">BCA</span>
+                    </div>
+
+                    <div class="flex justify-between items-center py-3 border-b border-border">
+                        <span class="text-muted-foreground">Nomor Rekening</span>
+                        <div class="flex items-center gap-2">
+                            <span id="account-number"
+                                class="font-semibold text-foreground font-mono text-lg">123456789</span>
+                            <button id="copy-btn" class="p-2 rounded-md hover:bg-muted transition-colors"
+                                onclick="copyAccountNumber()">
+                                <i data-lucide="copy" class="w-4 h-4 text-muted-foreground"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center py-3">
+                        <span class="text-muted-foreground">Atas Nama</span>
+                        <span class="font-semibold text-foreground">IKA FSRD Trisakti</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QR Code Placeholder -->
+            <div class="bg-card border border-border rounded-2xl p-8 shadow-lg mb-8">
+                <h2 class="text-xl font-semibold text-foreground mb-6 text-center">
+                    Atau Scan QR Code
+                </h2>
+                <div class="flex justify-center">
+                    <div
+                        class="w-48 h-48 bg-muted rounded-xl flex items-center justify-center border-2 border-dashed border-border">
+                        <span class="text-muted-foreground text-sm text-center px-4">
+                            QR Code akan ditampilkan di sini
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thank You Message -->
+            <div class="text-center p-6 bg-primary/5 rounded-xl">
+                <p class="text-foreground font-medium mb-2">
+                    Terima kasih atas dukungan Anda! 🙏
+                </p>
+                <p class="text-sm text-muted-foreground">
+                    Donasi Anda akan digunakan untuk program workshop, beasiswa, dan pengembangan komunitas alumni.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-foreground text-background py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="space-y-4">
+                    <img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo" class="h-10 w-auto opacity-90">
+                    <p class="text-sm opacity-90 leading-relaxed">Ikatan Alumni Fakultas Seni Rupa & Desain Universitas
+                        Trisakti.</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold mb-4">Hubungi Kami</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start space-x-3"><span class="opacity-75">📧</span>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <p class="opacity-90">info@ikafsrdtrisakti.org</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3"><span class="opacity-75">📞</span>
+                            <div>
+                                <p class="font-medium">Telepon</p>
+                                <p class="opacity-90">+62 21 5663232</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold mb-4">Jam Operasional</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between"><span>Senin - Jumat</span><span class="opacity-90">09:00 -
+                                17:00</span></div>
+                        <div class="flex justify-between"><span>Sabtu</span><span class="opacity-90">09:00 -
+                                14:00</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-background/20 pt-6 text-center">
+                <p class="text-sm opacity-90">© 2025 IKA FSRD Trisakti. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+
+        function copyAccountNumber() {
+            const accountNumber = document.getElementById('account-number').textContent;
+            navigator.clipboard.writeText(accountNumber).then(() => {
+                alert('Nomor rekening disalin: ' + accountNumber);
+            });
+        }
+    </script>
+</body>
+
+</html>

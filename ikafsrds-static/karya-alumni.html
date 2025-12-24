@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karya Alumni - IKA FSRD Trisakti</title>
+    <meta name="description"
+        content="Koleksi karya inspiratif dari alumni IKA FSRD Trisakti di berbagai bidang desain dan seni.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dist/output.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+
+<body class="min-h-screen">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full backdrop-blur border-b shadow-md"
+        style="background: hsl(var(--header-bg));">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo"
+                            class="h-10 w-auto"></a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Beranda</a>
+                    <a href="tentang-kami.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Tentang
+                        Kami</a>
+                    <a href="program.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Program</a>
+                    <a href="karya-alumni.html" class="text-gray-700 font-medium px-4 py-2 rounded-md bg-white/30">Karya
+                        Alumni</a>
+                    <a href="donasi.html"
+                        class="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-4 py-2 rounded-md">Donasi</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 p-2 rounded-md hover:bg-white/20">
+                    <i id="menu-icon-open" data-lucide="menu" class="h-6 w-6"></i>
+                    <i id="menu-icon-close" data-lucide="x" class="h-6 w-6 hidden"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 right-0 border-b shadow-lg"
+                style="background: hsl(var(--header-bg));">
+                <nav class="flex flex-col py-4">
+                    <a href="index.html" class="px-6 py-3 text-gray-700 font-medium">Beranda</a>
+                    <a href="tentang-kami.html" class="px-6 py-3 text-gray-700 font-medium">Tentang Kami</a>
+                    <a href="program.html" class="px-6 py-3 text-gray-700 font-medium">Program</a>
+                    <a href="karya-alumni.html" class="px-6 py-3 text-gray-700 font-medium bg-white/20">Karya Alumni</a>
+                    <a href="donasi.html"
+                        class="mx-4 my-2 bg-primary text-primary-foreground font-medium px-4 py-2 rounded-md text-center">Donasi</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Hero -->
+        <div class="text-center mb-16">
+            <h1
+                class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                Karya Alumni
+            </h1>
+            <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Koleksi karya inspiratif dari alumni IKA FSRD Trisakti yang telah berkontribusi di berbagai bidang
+                desain dan seni
+            </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-card rounded-lg border shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-muted">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Branding"
+                        alt="Rebranding Identitas Visual"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-primary/90 text-primary-foreground text-xs px-2 py-1 rounded-full">Desain
+                            Grafis</span>
+                    </div>
+                </div>
+                <div class="p-4 flex-grow">
+                    <h3 class="text-lg font-semibold mb-2 line-clamp-2">Rebranding Identitas Visual Startup Teknologi
+                    </h3>
+                    <p class="text-muted-foreground text-sm line-clamp-3">Proyek rebranding komprehensif untuk startup
+                        teknologi yang mencakup logo, brand guidelines, dan sistem identitas visual.</p>
+                </div>
+                <div class="p-4 pt-0">
+                    <div class="flex items-center gap-3 pt-4 border-t">
+                        <div
+                            class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                            DP</div>
+                        <p class="text-sm font-medium">Doddy PKI</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-card rounded-lg border shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-muted">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Interior" alt="Desain Interior Kafe"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-primary/90 text-primary-foreground text-xs px-2 py-1 rounded-full">Desain
+                            Interior</span>
+                    </div>
+                </div>
+                <div class="p-4 flex-grow">
+                    <h3 class="text-lg font-semibold mb-2 line-clamp-2">Desain Interior Kafe Modern Minimalis</h3>
+                    <p class="text-muted-foreground text-sm line-clamp-3">Konsep desain interior untuk kafe dengan tema
+                        modern minimalis yang mengutamakan kenyamanan dan estetika.</p>
+                </div>
+                <div class="p-4 pt-0">
+                    <div class="flex items-center gap-3 pt-4 border-t">
+                        <div
+                            class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                            RK</div>
+                        <p class="text-sm font-medium">Rina Kartika</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-card rounded-lg border shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-muted">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Social+Media"
+                        alt="Kampanye Visual Media Sosial"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-primary/90 text-primary-foreground text-xs px-2 py-1 rounded-full">Desain
+                            Grafis</span>
+                    </div>
+                </div>
+                <div class="p-4 flex-grow">
+                    <h3 class="text-lg font-semibold mb-2 line-clamp-2">Kampanye Visual Media Sosial</h3>
+                    <p class="text-muted-foreground text-sm line-clamp-3">Serie konten visual untuk kampanye media
+                        sosial brand fashion lokal dengan elemen grafis yang bold.</p>
+                </div>
+                <div class="p-4 pt-0">
+                    <div class="flex items-center gap-3 pt-4 border-t">
+                        <div
+                            class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                            BS</div>
+                        <p class="text-sm font-medium">Budi Santoso</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+                class="bg-card rounded-lg border shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-muted">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Illustration"
+                        alt="Ilustrasi Buku Anak-anak"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="absolute top-3 right-3">
+                        <span
+                            class="bg-primary/90 text-primary-foreground text-xs px-2 py-1 rounded-full">Ilustrasi</span>
+                    </div>
+                </div>
+                <div class="p-4 flex-grow">
+                    <h3 class="text-lg font-semibold mb-2 line-clamp-2">Ilustrasi Buku Anak-anak</h3>
+                    <p class="text-muted-foreground text-sm line-clamp-3">Koleksi ilustrasi untuk buku cerita anak-anak
+                        dengan karakter yang ekspresif dan penuh warna.</p>
+                </div>
+                <div class="p-4 pt-0">
+                    <div class="flex items-center gap-3 pt-4 border-t">
+                        <div
+                            class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                            MI</div>
+                        <p class="text-sm font-medium">Maya Indah</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+                class="bg-card rounded-lg border shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-muted">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Packaging"
+                        alt="Packaging Design Produk Organik"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-primary/90 text-primary-foreground text-xs px-2 py-1 rounded-full">Desain
+                            Produk</span>
+                    </div>
+                </div>
+                <div class="p-4 flex-grow">
+                    <h3 class="text-lg font-semibold mb-2 line-clamp-2">Packaging Design Produk Organik</h3>
+                    <p class="text-muted-foreground text-sm line-clamp-3">Desain kemasan untuk lini produk makanan
+                        organik yang ramah lingkungan dengan material sustainable.</p>
+                </div>
+                <div class="p-4 pt-0">
+                    <div class="flex items-center gap-3 pt-4 border-t">
+                        <div
+                            class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                            AW</div>
+                        <p class="text-sm font-medium">Arief Wibowo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div
+                class="bg-card rounded-lg border shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-muted">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Motion"
+                        alt="Motion Graphics Video Promosi"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-primary/90 text-primary-foreground text-xs px-2 py-1 rounded-full">Motion
+                            Design</span>
+                    </div>
+                </div>
+                <div class="p-4 flex-grow">
+                    <h3 class="text-lg font-semibold mb-2 line-clamp-2">Motion Graphics untuk Video Promosi</h3>
+                    <p class="text-muted-foreground text-sm line-clamp-3">Animasi motion graphics untuk video promosi
+                        perusahaan teknologi dengan tipografi kinetik.</p>
+                </div>
+                <div class="p-4 pt-0">
+                    <div class="flex items-center gap-3 pt-4 border-t">
+                        <div
+                            class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                            DP</div>
+                        <p class="text-sm font-medium">Diana Putri</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div
+                class="bg-card rounded-lg border shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-muted">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=UI+UX" alt="UI/UX Design Aplikasi Mobile"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-primary/90 text-primary-foreground text-xs px-2 py-1 rounded-full">UI/UX
+                            Design</span>
+                    </div>
+                </div>
+                <div class="p-4 flex-grow">
+                    <h3 class="text-lg font-semibold mb-2 line-clamp-2">UI/UX Design Aplikasi Mobile E-commerce</h3>
+                    <p class="text-muted-foreground text-sm line-clamp-3">Desain antarmuka dan pengalaman pengguna untuk
+                        aplikasi mobile e-commerce dengan fokus kemudahan navigasi.</p>
+                </div>
+                <div class="p-4 pt-0">
+                    <div class="flex items-center gap-3 pt-4 border-t">
+                        <div
+                            class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                            RH</div>
+                        <p class="text-sm font-medium">Rudi Hermawan</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div
+                class="bg-card rounded-lg border shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                <div class="relative w-full aspect-[4/3] overflow-hidden bg-muted">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Art+Installation"
+                        alt="Instalasi Seni Ruang Publik"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-primary/90 text-primary-foreground text-xs px-2 py-1 rounded-full">Seni
+                            Instalasi</span>
+                    </div>
+                </div>
+                <div class="p-4 flex-grow">
+                    <h3 class="text-lg font-semibold mb-2 line-clamp-2">Instalasi Seni Ruang Publik</h3>
+                    <p class="text-muted-foreground text-sm line-clamp-3">Karya instalasi seni interaktif di ruang
+                        publik yang mengangkat tema keberlanjutan lingkungan.</p>
+                </div>
+                <div class="p-4 pt-0">
+                    <div class="flex items-center gap-3 pt-4 border-t">
+                        <div
+                            class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+                            SD</div>
+                        <p class="text-sm font-medium">Sari Dewi</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-foreground text-background py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="space-y-4">
+                    <img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo" class="h-10 w-auto opacity-90">
+                    <p class="text-sm opacity-90 leading-relaxed">Ikatan Alumni Fakultas Seni Rupa & Desain Universitas
+                        Trisakti.</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold mb-4">Hubungi Kami</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start space-x-3"><span class="opacity-75">📧</span>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <p class="opacity-90">info@ikafsrdtrisakti.org</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3"><span class="opacity-75">📞</span>
+                            <div>
+                                <p class="font-medium">Telepon</p>
+                                <p class="opacity-90">+62 21 5663232</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold mb-4">Jam Operasional</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between"><span>Senin - Jumat</span><span class="opacity-90">09:00 -
+                                17:00</span></div>
+                        <div class="flex justify-between"><span>Sabtu</span><span class="opacity-90">09:00 -
+                                14:00</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-background/20 pt-6 text-center">
+                <p class="text-sm opacity-90">© 2025 IKA FSRD Trisakti. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - IKA FSRD Trisakti</title>
+    <meta name="description"
+        content="Tentang IKA FSRD Trisakti - Membangun Rumah yang Hidup untuk Semua Generasi Alumni">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dist/output.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+
+<body class="min-h-screen">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full backdrop-blur border-b shadow-md"
+        style="background: hsl(var(--header-bg)); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo"
+                            class="h-10 w-auto"></a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20 transition-colors">Beranda</a>
+                    <a href="tentang-kami.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md bg-white/30">Tentang
+                        Kami</a>
+                    <a href="program.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20 transition-colors">Program</a>
+                    <a href="karya-alumni.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20 transition-colors">Karya
+                        Alumni</a>
+                    <a href="donasi.html"
+                        class="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-4 py-2 rounded-md transition-colors">Donasi</a>
+                </nav>
+                <button id="mobile-menu-button"
+                    class="md:hidden text-gray-700 p-2 rounded-md hover:bg-white/20 transition-colors">
+                    <i id="menu-icon-open" data-lucide="menu" class="h-6 w-6"></i>
+                    <i id="menu-icon-close" data-lucide="x" class="h-6 w-6 hidden"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 right-0 border-b shadow-lg"
+                style="background: hsl(var(--header-bg));">
+                <nav class="flex flex-col py-4">
+                    <a href="index.html" class="px-6 py-3 text-gray-700 hover:text-gray-900 font-medium">Beranda</a>
+                    <a href="tentang-kami.html" class="px-6 py-3 text-gray-700 font-medium bg-white/20">Tentang Kami</a>
+                    <a href="program.html" class="px-6 py-3 text-gray-700 hover:text-gray-900 font-medium">Program</a>
+                    <a href="karya-alumni.html" class="px-6 py-3 text-gray-700 hover:text-gray-900 font-medium">Karya
+                        Alumni</a>
+                    <a href="donasi.html"
+                        class="mx-4 my-2 bg-primary text-primary-foreground font-medium px-4 py-2 rounded-md text-center">Donasi</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-32 bg-cover bg-center bg-no-repeat"
+            style="background-image: url('assets/team-photo-new.jpg');">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Tentang IKA FSRD Trisakti</h1>
+                <p class="text-xl md:text-2xl max-w-3xl mx-auto">Membangun Rumah yang Hidup untuk Semua Generasi</p>
+            </div>
+        </section>
+
+        <!-- Narrative Section -->
+        <section class="py-20 bg-background">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+                        IKA FSRD Trisakti adalah rumah bagi ribuan kreator, desainer, seniman, dan inovator yang telah
+                        melewati gerbang Fakultas Seni Rupa dan Desain Universitas Trisakti. Kami bukan hanya sekadar
+                        organisasi alumni—kami adalah ekosistem hidup yang terus bergerak, berbagi, dan berkembang
+                        bersama.
+                    </p>
+                    <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+                        Sejak berdiri, visi kami selalu jelas: menciptakan jejaring yang solid, memberdayakan karya
+                        alumni,
+                        dan menjadi wadah silaturahmi yang bermakna. Dari sini lahir kolaborasi kreatif, peluang bisnis,
+                        hingga persahabatan yang melampaui generasi.
+                    </p>
+                    <p class="text-lg leading-relaxed text-muted-foreground mb-6">
+                        Kami percaya bahwa kekuatan terbesar sebuah komunitas terletak pada kemampuannya untuk saling
+                        mengangkat. Oleh karena itu, IKA FSRD Trisakti tidak hanya fokus pada acara seremonial, tetapi
+                        pada program nyata yang berdampak: dari workshop hingga pameran karya, dari mentoring hingga
+                        kesempatan kerja sama strategis.
+                    </p>
+                    <p class="text-lg leading-relaxed text-foreground font-semibold">
+                        Website ini adalah langkah kami untuk membawa rumah digital yang lebih terbuka, transparan, dan
+                        aksesible bagi seluruh alumni—di mana pun Anda berada.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dewan Pengurus -->
+        <section class="py-20 bg-secondary/30">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Dewan Pengurus Inti</h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Tim kepemimpinan yang berdedikasi membangun komunitas alumni yang solid dan bermanfaat
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    <!-- Member 1 -->
+                    <div
+                        class="bg-card rounded-lg border shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+                        <div class="p-8">
+                            <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="https://placehold.co/200x200/e2e8f0/64748b?text=OS" alt="Oliver Simbolon"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold text-foreground mb-2">Oliver Simbolon</h3>
+                            <p class="text-primary font-semibold">Ketua Umum</p>
+                        </div>
+                    </div>
+
+                    <!-- Member 2 -->
+                    <div
+                        class="bg-card rounded-lg border shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+                        <div class="p-8">
+                            <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="https://placehold.co/200x200/e2e8f0/64748b?text=MS" alt="Mumu Sunan"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold text-foreground mb-2">Mumu Sunan</h3>
+                            <p class="text-primary font-semibold">Sekretaris Jendral</p>
+                        </div>
+                    </div>
+
+                    <!-- Member 3 -->
+                    <div
+                        class="bg-card rounded-lg border shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+                        <div class="p-8">
+                            <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="https://placehold.co/200x200/e2e8f0/64748b?text=EF" alt="Edy Fahyudi"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold text-foreground mb-2">Edy Fahyudi</h3>
+                            <p class="text-primary font-semibold">Bendahara Umum</p>
+                        </div>
+                    </div>
+
+                    <!-- Member 4 -->
+                    <div
+                        class="bg-card rounded-lg border shadow-sm text-center hover:shadow-lg transition-shadow duration-300">
+                        <div class="p-8">
+                            <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20">
+                                <img src="https://placehold.co/200x200/e2e8f0/64748b?text=KW" alt="Kiswinar"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold text-foreground mb-2">Kiswinar</h3>
+                            <p class="text-primary font-semibold">Kabid. Budaya & Riset</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legalitas -->
+        <section class="py-16 bg-background">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-card rounded-lg border shadow-sm border-l-4 border-l-primary">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-4 text-foreground">Legalitas & Unit Usaha</h3>
+                            <p class="text-muted-foreground leading-relaxed">
+                                IKA FSRD beroperasi secara profesional dengan dukungan badan hukum <strong>PT Unit
+                                    Usaha</strong> yang
+                                mandiri dan transparan. Kami berkomitmen untuk mengelola organisasi dengan tata kelola
+                                yang baik,
+                                akuntabilitas finansial, dan fokus pada keberlanjutan komunitas untuk jangka panjang.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-gradient-to-br from-primary/5 to-accent/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Mari Bergabung dengan Kami</h2>
+                <p class="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                    Punya pertanyaan atau ingin terlibat lebih jauh? Kami selalu terbuka untuk diskusi dan kolaborasi.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#footer"
+                        class="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg">
+                        Hubungi Kami
+                    </a>
+                    <a href="program.html"
+                        class="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-colors">
+                        Lihat Program Kami
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-foreground text-background py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="space-y-4">
+                    <img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo" class="h-10 w-auto opacity-90">
+                    <p class="text-sm opacity-90 leading-relaxed">
+                        Ikatan Alumni Fakultas Seni Rupa & Desain Universitas Trisakti -
+                        Menghubungkan alumni untuk kemajuan bersama dalam dunia seni dan desain.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold mb-4">Hubungi Kami</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start space-x-3">
+                            <span class="opacity-75">📧</span>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <p class="opacity-90">info@ikafsrdtrisakti.org</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="opacity-75">📞</span>
+                            <div>
+                                <p class="font-medium">Telepon</p>
+                                <p class="opacity-90">+62 21 5663232</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="opacity-75">📍</span>
+                            <div>
+                                <p class="font-medium">Alamat</p>
+                                <p class="opacity-90">Jl. Kyai Tapa No.1, Grogol<br>Jakarta Barat 11440</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold mb-4">Jam Operasional</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between"><span>Senin - Jumat</span><span class="opacity-90">09:00 -
+                                17:00</span></div>
+                        <div class="flex justify-between"><span>Sabtu</span><span class="opacity-90">09:00 -
+                                14:00</span></div>
+                        <div class="flex justify-between"><span>Minggu</span><span class="opacity-90">Tutup</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-background/20 pt-6 text-center">
+                <p class="text-sm opacity-90">© 2025 Ikatan Alumni Fakultas Seni Rupa & Desain Universitas Trisakti. All
+                    Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

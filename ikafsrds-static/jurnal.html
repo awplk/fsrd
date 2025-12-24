@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurnal - IKA FSRD Trisakti</title>
+    <meta name="description"
+        content="Jurnal IKA FSRD - Ruang untuk karya-karya kritis dan studi kasus desain yang merespons zaman.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dist/output.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+
+<body class="min-h-screen bg-background">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full backdrop-blur border-b shadow-md"
+        style="background: hsl(var(--header-bg));">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo"
+                            class="h-10 w-auto"></a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Beranda</a>
+                    <a href="tentang-kami.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Tentang
+                        Kami</a>
+                    <a href="program.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Program</a>
+                    <a href="karya-alumni.html"
+                        class="text-gray-700 hover:text-gray-900 font-medium px-4 py-2 rounded-md hover:bg-white/20">Karya
+                        Alumni</a>
+                    <a href="donasi.html"
+                        class="bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-4 py-2 rounded-md">Donasi</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 p-2 rounded-md hover:bg-white/20">
+                    <i id="menu-icon-open" data-lucide="menu" class="h-6 w-6"></i>
+                    <i id="menu-icon-close" data-lucide="x" class="h-6 w-6 hidden"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 right-0 border-b shadow-lg"
+                style="background: hsl(var(--header-bg));">
+                <nav class="flex flex-col py-4">
+                    <a href="index.html" class="px-6 py-3 text-gray-700 font-medium">Beranda</a>
+                    <a href="tentang-kami.html" class="px-6 py-3 text-gray-700 font-medium">Tentang Kami</a>
+                    <a href="program.html" class="px-6 py-3 text-gray-700 font-medium">Program</a>
+                    <a href="karya-alumni.html" class="px-6 py-3 text-gray-700 font-medium">Karya Alumni</a>
+                    <a href="donasi.html"
+                        class="mx-4 my-2 bg-primary text-primary-foreground font-medium px-4 py-2 rounded-md text-center">Donasi</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero -->
+        <section class="py-16 px-4 bg-gradient-to-br from-primary/5 to-accent/10">
+            <div class="max-w-6xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Jurnal IKA FSRD</h1>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Ruang untuk karya-karya kritis dan studi kasus desain yang merespons zaman
+                </p>
+            </div>
+        </section>
+
+        <!-- Articles Grid -->
+        <section class="py-16 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Article 1 -->
+                    <div
+                        class="bg-card rounded-lg border shadow-sm group hover:shadow-lg transition-all duration-300 cursor-pointer">
+                        <div class="aspect-video bg-muted rounded-t-lg overflow-hidden">
+                            <img src="https://placehold.co/400x225/e2e8f0/64748b?text=Design+Digital"
+                                alt="Desain Grafis di Era Digital"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                Desain Grafis di Era Digital: Antara Tradisi dan Inovasi
+                            </h3>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p class="text-muted-foreground text-sm line-clamp-3 mb-4">
+                                Eksplorasi tentang bagaimana desainer grafis Indonesia menghadapi tantangan transformasi
+                                digital sambil mempertahankan nilai-nilai tradisional.
+                            </p>
+                            <div class="flex items-center justify-between text-xs text-muted-foreground">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="user" class="w-3 h-3"></i>
+                                    <span>Sarah Maharani</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="calendar" class="w-3 h-3"></i>
+                                    <span>15 Sep 2024</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 text-xs text-muted-foreground">8 min read</div>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div
+                        class="bg-card rounded-lg border shadow-sm group hover:shadow-lg transition-all duration-300 cursor-pointer">
+                        <div class="aspect-video bg-muted rounded-t-lg overflow-hidden">
+                            <img src="https://placehold.co/400x225/e2e8f0/64748b?text=Architecture"
+                                alt="Arsitektur Berkelanjutan"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                Arsitektur Berkelanjutan: Solusi untuk Kota Masa Depan
+                            </h3>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p class="text-muted-foreground text-sm line-clamp-3 mb-4">
+                                Studi kasus penerapan prinsip-prinsip arsitektur hijau dalam proyek-proyek pembangunan
+                                kota di Indonesia.
+                            </p>
+                            <div class="flex items-center justify-between text-xs text-muted-foreground">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="user" class="w-3 h-3"></i>
+                                    <span>Budi Santoso</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="calendar" class="w-3 h-3"></i>
+                                    <span>12 Sep 2024</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 text-xs text-muted-foreground">12 min read</div>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div
+                        class="bg-card rounded-lg border shadow-sm group hover:shadow-lg transition-all duration-300 cursor-pointer">
+                        <div class="aspect-video bg-muted rounded-t-lg overflow-hidden">
+                            <img src="https://placehold.co/400x225/e2e8f0/64748b?text=Fashion" alt="Fashion Lokal"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                Fashion Lokal dalam Panggung Global
+                            </h3>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p class="text-muted-foreground text-sm line-clamp-3 mb-4">
+                                Analisis perjalanan brand fashion Indonesia yang berhasil menembus pasar internasional
+                                tanpa kehilangan identitas lokal.
+                            </p>
+                            <div class="flex items-center justify-between text-xs text-muted-foreground">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="user" class="w-3 h-3"></i>
+                                    <span>Dinda Prawira</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="calendar" class="w-3 h-3"></i>
+                                    <span>8 Sep 2024</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 text-xs text-muted-foreground">6 min read</div>
+                        </div>
+                    </div>
+
+                    <!-- Article 4 -->
+                    <div
+                        class="bg-card rounded-lg border shadow-sm group hover:shadow-lg transition-all duration-300 cursor-pointer">
+                        <div class="aspect-video bg-muted rounded-t-lg overflow-hidden">
+                            <img src="https://placehold.co/400x225/e2e8f0/64748b?text=Interior" alt="Interior Design"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                Interior Design: Menciptakan Ruang yang Bercerita
+                            </h3>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p class="text-muted-foreground text-sm line-clamp-3 mb-4">
+                                Bagaimana desainer interior dapat menciptakan ruang yang tidak hanya indah secara
+                                visual, tetapi juga bermakna secara emosional.
+                            </p>
+                            <div class="flex items-center justify-between text-xs text-muted-foreground">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="user" class="w-3 h-3"></i>
+                                    <span>Rizki Adiputra</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="calendar" class="w-3 h-3"></i>
+                                    <span>5 Sep 2024</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 text-xs text-muted-foreground">10 min read</div>
+                        </div>
+                    </div>
+
+                    <!-- Article 5 -->
+                    <div
+                        class="bg-card rounded-lg border shadow-sm group hover:shadow-lg transition-all duration-300 cursor-pointer">
+                        <div class="aspect-video bg-muted rounded-t-lg overflow-hidden">
+                            <img src="https://placehold.co/400x225/e2e8f0/64748b?text=Typography"
+                                alt="Tipografi Indonesia"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                Tipografi Indonesia: Menggali Kekayaan Huruf Nusantara
+                            </h3>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p class="text-muted-foreground text-sm line-clamp-3 mb-4">
+                                Penelitian mendalam tentang perkembangan tipografi Indonesia dan potensinya dalam
+                                industri desain kontemporer.
+                            </p>
+                            <div class="flex items-center justify-between text-xs text-muted-foreground">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="user" class="w-3 h-3"></i>
+                                    <span>Maya Sari</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="calendar" class="w-3 h-3"></i>
+                                    <span>1 Sep 2024</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 text-xs text-muted-foreground">7 min read</div>
+                        </div>
+                    </div>
+
+                    <!-- Article 6 -->
+                    <div
+                        class="bg-card rounded-lg border shadow-sm group hover:shadow-lg transition-all duration-300 cursor-pointer">
+                        <div class="aspect-video bg-muted rounded-t-lg overflow-hidden">
+                            <img src="https://placehold.co/400x225/e2e8f0/64748b?text=Installation" alt="Seni Instalasi"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-4">
+                            <h3
+                                class="text-lg font-semibold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                Seni Instalasi: Dialog Antara Ruang dan Pengunjung
+                            </h3>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p class="text-muted-foreground text-sm line-clamp-3 mb-4">
+                                Studi kasus karya seni instalasi yang berhasil menciptakan pengalaman interaktif yang
+                                bermakna bagi pengunjung.
+                            </p>
+                            <div class="flex items-center justify-between text-xs text-muted-foreground">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="user" class="w-3 h-3"></i>
+                                    <span>Andi Firmansyah</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="calendar" class="w-3 h-3"></i>
+                                    <span>28 Aug 2024</span>
+                                </div>
+                            </div>
+                            <div class="mt-2 text-xs text-muted-foreground">9 min read</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Call for Submissions -->
+        <section class="py-16 px-4 bg-gradient-to-br from-accent/10 to-primary/5">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-card rounded-lg border-2 border-primary/20 shadow-sm">
+                    <div class="p-6 md:p-8 text-center">
+                        <h2 class="text-3xl font-bold mb-4">Call for Submissions</h2>
+                        <p class="text-lg text-muted-foreground mb-6">Jadilah bagian dari suara kolektif desainer
+                            Indonesia</p>
+                    </div>
+                    <div class="p-6 md:p-8 pt-0 space-y-6">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-xl font-semibold mb-4">Kami Menerima</h3>
+                                <ul class="space-y-2 text-muted-foreground">
+                                    <li>• Artikel kritis tentang desain kontemporer</li>
+                                    <li>• Studi kasus proyek desain yang inovatif</li>
+                                    <li>• Review karya atau pameran desain</li>
+                                    <li>• Esai reflektif tentang praktik desain</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-4">Persyaratan</h3>
+                                <ul class="space-y-2 text-muted-foreground">
+                                    <li>• Karya original dan belum dipublikasikan</li>
+                                    <li>• Panjang artikel 1500-3000 kata</li>
+                                    <li>• Gambar berkualitas tinggi (jika relevan)</li>
+                                    <li>• Bio singkat penulis dan portofolio</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text-center pt-6 border-t">
+                            <p class="mb-4">
+                                Kirim proposal atau naskah lengkap ke: <br>
+                                <strong class="text-primary text-lg">jurnal@ikafsrd.org</strong>
+                            </p>
+                            <a href="mailto:jurnal@ikafsrd.org"
+                                class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium transition-colors">
+                                <span>Submit Your Work</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-foreground text-background py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="space-y-4">
+                    <img src="assets/logo-ikafsrd.png" alt="IKA FSRD Trisakti Logo" class="h-10 w-auto opacity-90">
+                    <p class="text-sm opacity-90 leading-relaxed">Ikatan Alumni Fakultas Seni Rupa & Desain Universitas
+                        Trisakti.</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold mb-4">Hubungi Kami</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start space-x-3"><span class="opacity-75">📧</span>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <p class="opacity-90">info@ikafsrdtrisakti.org</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3"><span class="opacity-75">📞</span>
+                            <div>
+                                <p class="font-medium">Telepon</p>
+                                <p class="opacity-90">+62 21 5663232</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold mb-4">Jam Operasional</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between"><span>Senin - Jumat</span><span class="opacity-90">09:00 -
+                                17:00</span></div>
+                        <div class="flex justify-between"><span>Sabtu</span><span class="opacity-90">09:00 -
+                                14:00</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-background/20 pt-6 text-center">
+                <p class="text-sm opacity-90">© 2025 IKA FSRD Trisakti. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

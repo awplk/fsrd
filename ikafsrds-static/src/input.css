@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* IKA FSRD Trisakti Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 220 3% 35%;
+    
+    /* Header custom color */
+    --header-bg: 174 72% 56%;       /* #40E0D0 in HSL */
+    
+    /* IKA FSRD Brand Colors from actual logo */
+    --ika-yellow: 45 100% 50%;    /* Orange-yellow circle from logo */
+    --ika-blue: 210 100% 45%;     /* Blue triangle from logo */
+    --ika-red: 0 100% 50%;        /* Red square from logo */
+    --ika-green: 90 100% 40%;     /* Green line from logo */
+    --ika-gray: 210 5% 45%;       /* Main text gray from logo */
+    
+    
+    /* Semantic tokens using brand colors */
+    --card: 0 0% 100%;
+    --card-foreground: 210 5% 45%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 5% 45%;
+
+    --primary: 210 100% 45%;      /* Using logo blue */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 210 5% 45%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 210 5% 60%;
+
+    --accent: 45 100% 50%;         /* Using logo yellow */
+    --accent-foreground: 210 5% 15%;
+
+    --destructive: 0 100% 50%;     /* Using logo red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 100% 45%;          /* Using logo blue */
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 3% 15%;
+    --foreground: 0 0% 98%;
+    
+    --card: 220 3% 18%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 3% 18%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 203 100% 36%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 3% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 3% 25%;
+    --muted-foreground: 220 3% 65%;
+
+    --accent: 45 100% 48%;
+    --accent-foreground: 220 3% 15%;
+
+    --destructive: 10 76% 53%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 3% 25%;
+    --input: 220 3% 25%;
+    --ring: 203 100% 36%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* IKA FSRD Geometric Elements matching logo */
+  .ika-geometric-circle {
+    @apply w-6 h-6 rounded-full;
+    background: hsl(var(--ika-yellow));
+  }
+  
+  .ika-geometric-triangle {
+    @apply w-6 h-6;
+    background: hsl(var(--ika-blue));
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+  .ika-geometric-square {
+    @apply w-6 h-4;
+    background: hsl(var(--ika-red));
+  }
+  
+  .ika-geometric-line {
+    @apply w-2 h-8;
+    background: hsl(var(--ika-green));
+  }
+  
+  .hero-section {
+    @apply relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat;
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/40;
+  }
+  
+  /* Background Decorative Elements */
+  .section-decorator {
+    @apply relative overflow-hidden;
+  }
+
+  .section-decorator::before,
+  .section-decorator::after {
+    content: '';
+    @apply absolute opacity-10 z-0;
+  }
+
+  .decorator-circles::before {
+    @apply w-32 h-32 rounded-full;
+    background: hsl(var(--ika-yellow));
+    top: -4rem;
+    right: -4rem;
+  }
+
+  .decorator-circles::after {
+    @apply w-24 h-24 rounded-full;
+    background: hsl(var(--ika-blue));
+    bottom: -3rem;
+    left: -3rem;
+  }
+
+  .decorator-triangles::before {
+    width: 0;
+    height: 0;
+    border-left: 3rem solid transparent;
+    border-right: 3rem solid transparent;
+    border-bottom: 4rem solid hsl(var(--ika-red));
+    top: 2rem;
+    right: 2rem;
+    opacity: 0.08;
+  }
+
+  .decorator-squares::after {
+    @apply w-20 h-20;
+    background: hsl(var(--ika-green));
+    bottom: 1rem;
+    right: 1rem;
+    transform: rotate(45deg);
+    opacity: 0.06;
+  }
+
+  /* Masonry Grid Layout */
+  .masonry-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .masonry-grid {
+      column-count: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      column-count: 3;
+    }
+  }
+
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Artistic CTA Background */
+  .cta-artistic-bg {
+    @apply relative;
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
+  }
+
+  .cta-artistic-bg::before {
+    content: '';
+    @apply absolute inset-0 opacity-[0.03];
+    background-image: 
+      repeating-linear-gradient(45deg, hsl(var(--primary)) 0px, hsl(var(--primary)) 2px, transparent 2px, transparent 12px),
+      repeating-linear-gradient(-45deg, hsl(var(--accent)) 0px, hsl(var(--accent)) 2px, transparent 2px, transparent 12px);
+  }
+
+  .cta-artistic-bg::after {
+    content: '';
+    @apply absolute inset-0 opacity-[0.02];
+    background-image: radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  /* Hero Transition Styles */
+  .hero-section-interactive {
+    @apply relative;
+  }
+}

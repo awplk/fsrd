@@ -1,11 +1,13 @@
 # Konfigurasi Git dan SSH
 
 Saya menggunakan Macbook dan iterm. Di laptop saya ada 3 akun git
-- github adi.wahyu.p@gmail.com
-- github adi.wahyu.p@labkreatif.com
-- bitbucket adi.wahyu.p@univpancasila.ac.id
+
+- github <adi.wahyu.p@gmail.com>
+- github <adi.wahyu.p@labkreatif.com>
+- bitbucket <adi.wahyu.p@univpancasila.ac.id>
 
 ini isinya
+
 ```ssh
 Host github.com
   HostName github.com
@@ -26,3 +28,21 @@ Host github-labkreatif
   IdentityFile ~/.ssh/id_ed25519_labkreatif
   IdentitiesOnly yes
 ```
+
+---
+
+## Project Repository
+
+**FSRD Project Repository:**
+
+- **URL:** <https://github.com/awplk/fsrd>
+- **Branch:** `main`
+- **Remote:** `origin`
+
+**Struktur:**
+
+- `docs/` - Dokumentasi
+- `ikafsrds-digital-home/` - React project (embedded repo)
+- `ikafsrds-static/` - Static HTML/CSS/JS version (embedded repo)
+
+**Push terakhir:** 24 Desember 2024
